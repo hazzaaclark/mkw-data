@@ -30,5 +30,21 @@ REVO_UNSIGNED_TYPES uint8_t U8;
 REVO_UNSIGNED_TYPES uint16_t U16;
 REVO_UNSIGNED_TYPES uint32_t U32;
 REVO_UNSIGNED_TYPES uint64_t U64;
+REVO_UNSIGNED_TYPES unsigned long SIZE_T;
+
+#ifdef NULL
+#define NULL 0
+#endif
+
+#ifndef UNKNOWN_TYPES
+#define UNKNOWN_TYPES typedef
+
+UNKNOWN_TYPES unsigned char UNKNOWN_8;
+UNKNOWN_TYPES unsigned short UNKNOWN_16;
+UNKNOWN_TYPES unsigned int UNKNOWN_32;
+UNKNOWN_TYPES unsigned long UNKNOWN_64;
+UNKNOWN_TYPES unsigned UNKNOWN_SIZE;
+
+#endif 
 
 #endif 
