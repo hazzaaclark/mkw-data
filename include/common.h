@@ -17,6 +17,10 @@ extern "C"
 {}
 #endif
 
+#ifdef NULL
+#define NULL 0
+#endif
+
 #define REVO_STANDARD_TYPES typedef
 
 REVO_STANDARD_TYPES int8_t s8;
@@ -31,10 +35,6 @@ REVO_UNSIGNED_TYPES uint16_t U16;
 REVO_UNSIGNED_TYPES uint32_t U32;
 REVO_UNSIGNED_TYPES uint64_t U64;
 REVO_UNSIGNED_TYPES unsigned long SIZE_T;
-
-#ifdef NULL
-#define NULL 0
-#endif
 
 #ifndef UNKNOWN_TYPES
 #define UNKNOWN_TYPES typedef
