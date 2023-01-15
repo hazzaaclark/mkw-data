@@ -23,7 +23,7 @@ extern "C"
 
 #define REVO_STANDARD_TYPES typedef
 
-REVO_STANDARD_TYPES int8_t s8;
+REVO_STANDARD_TYPES int8_t s8; 
 REVO_STANDARD_TYPES int16_t s16;
 REVO_STANDARD_TYPES int32_t S32;
 REVO_STANDARD_TYPES int64_t S64;
@@ -46,5 +46,11 @@ UNKNOWN_TYPES unsigned long UNKNOWN_64;
 UNKNOWN_TYPES unsigned UNKNOWN_SIZE;
 
 #endif 
+
+#ifndef UNKNOWN_FUNCTION 
+#define UNKNOWN_FUNCTION __declspec(inline void NAME(void)
+#endif
+
+#define UNKNOWN_FUNCTION_NONE(...)
 
 #endif 
