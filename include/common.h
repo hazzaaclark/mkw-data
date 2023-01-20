@@ -3,9 +3,6 @@
 #ifndef COMMON
 #define COMMON
 
-#include <assert.h>
-#include <stdbool.h>
-#include <stddef.h>
 #include <stdint.h>
 
 #if defined(_WIN32)
@@ -48,9 +45,13 @@ UNKNOWN_TYPES unsigned UNKNOWN_SIZE;
 #endif 
 
 #ifndef UNKNOWN_FUNCTION 
-#define UNKNOWN_FUNCTION __declspec(inline void NAME(void)
+#define UNKNOWN_FUNCTION(NAME) void NAME(void)
 #endif
 
 #define UNKNOWN_FUNCTION_NONE(...)
+
+#ifndef GENERIC_POINTER
+#define GENERIC_POINTER(RETURN_TYPE, FUNCTION, LOCATION)
+#endif 
 
 #endif 
