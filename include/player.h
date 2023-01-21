@@ -11,7 +11,7 @@ typedef struct
 {
 	SMALL_WEIGHTS
 	{
-		BABY_MARIO = 0x06,
+		MARIO = 0x06,
 		LUIGI = 0x0C,
 		PEACH = 0x01,
 		DAISY = 0x04,
