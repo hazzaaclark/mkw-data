@@ -3,15 +3,13 @@
 #ifndef PLAYER
 #define PLAYER
 
-#include "common.h"
-
-#define SMALL_WEIGHTS typedef enum
+#define SMALL_WEIGHTS 
 #define MEDIUM_WEIGHTS typedef enum
 #define LARGE_WEIGHTS typedef enum
 
 typedef struct
 {
-	SMALL_WEIGHTS
+	typedef enum SMALL_WEIGHTS
 	{
 		MARIO = 0x06,
 		LUIGI = 0x0C,
@@ -43,15 +41,13 @@ typedef struct
 		WALUIGI = 0x02,
 		DONKEY = 0x09,
 		BOWSER = 0x03,
-		KING_BOO = 0x13
+		KING_BOO = 0x13,
+		ROSALINA = 0x17,
+		FUNKY = 0x16,
+		DRY_BOWSER = 0x15
 
 	} LARGE;
 
 } PLAYER_TYPES;
-
-struct PLAYER_POINTER
-{
-	GENERIC_POINTER(, __stdcall, GET_PLAYER_TYPE, 0xFF, PLAYER_TYPES* TYPE);
-};
 
 #endif 
