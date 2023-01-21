@@ -3,15 +3,15 @@
 #ifndef PLAYER
 #define PLAYER
 
-#define SMALL_WEIGHTS 
+#define SMALL_WEIGHTS typedef enum 
 #define MEDIUM_WEIGHTS typedef enum
 #define LARGE_WEIGHTS typedef enum
 
 typedef struct
 {
-	typedef enum SMALL_WEIGHTS
+	SMALL_WEIGHTS
 	{
-		MARIO = 0x06,
+		BABY_MARIO = 0x06,
 		LUIGI = 0x0C,
 		PEACH = 0x01,
 		DAISY = 0x04,
@@ -20,7 +20,7 @@ typedef struct
 		KOOPA = 0x0E,
 		DRY_BONES = 0x05
 
-	} SMALL;
+	};
 
 	MEDIUM_WEIGHTS
 	{
@@ -33,7 +33,7 @@ typedef struct
 		DIDDY = 0x12,
 		BOWSER_JR = 0x14
 
-	} MEDIUM;
+	};
 
 	LARGE_WEIGHTS
 	{
@@ -46,8 +46,12 @@ typedef struct
 		FUNKY = 0x16,
 		DRY_BOWSER = 0x15
 
-	} LARGE;
+	};
 
 } PLAYER_TYPES;
+
+SMALL_WEIGHTS SMALL;
+MEDIUM_WEIGHTS MEDIUM;
+LARGE_WEIGHTS LARGE;
 
 #endif 
