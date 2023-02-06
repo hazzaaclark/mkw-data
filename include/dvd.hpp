@@ -20,6 +20,16 @@ typedef enum
 
 } ARCHIVE_STATE;
 
+U16 DVD_ARCHIVE()
+{
+	U16 ARCHIVE_COUNT = 1;
+	void INIT();
+	void CLEAR();
+	void* GET_FILE(const char* NAME, SIZE_T* SIZE);
+	void* UNMOUNT_DISK();
+
+};
+
 struct DVD_FUNCTIONS
 {
 	static void MOUNT();
