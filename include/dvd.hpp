@@ -20,7 +20,7 @@ typedef enum
 
 } ARCHIVE_STATE;
 
-U16 DVD_ARCHIVE()
+struct DVD_ARCHIVE
 {
 	U16 ARCHIVE_COUNT = 1;
 	void INIT();
