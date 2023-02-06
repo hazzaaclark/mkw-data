@@ -31,12 +31,12 @@ typedef enum NITRO_TRACKS : U8
 	RAINBOW_ROAD = 0xD
 };
 
-#endif
-
 typedef enum RETRO_TRACKS : U8
 {
 
 };
+
+#endif
 
 
 #define RACE_PROPERTIES const
