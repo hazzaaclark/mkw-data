@@ -4,6 +4,7 @@
 #define RACE_MANAGER
 
 #include "common.h"
+#include "player.h"
 
 #ifndef RACE_TRACK
 #define RACE_TRACK
@@ -33,12 +34,41 @@ typedef enum NITRO_TRACKS : U8
 
 typedef enum RETRO_TRACKS : U8
 {
+	GCN_PEACH_BEACH = 0x10,
+	DS_YOSHI_FALLS = 0x14,
+	SNES_GHOST_VALLEY_2 = 0x19,
+	N64_MARIO_RACEWAY = 0x1A,
+	
+	N64_SHERBET_LAND = 0x1B,
+	GBA_SHY_GUY_BEACH = 0x1F,
+	DS_DELFINO_SQUARE = 0x17,
+	GCN_WALUIGI_STADIUM = 0x12,
 
+	DS_DESERT_HILLS = 0x15,
+	GBA_BOWSER_CASTLE_3 = 0x1E,
+	N64_DKS_JUNGLE_PARKWAY = 0x1D,
+	GCN_MARIO_CIRCUUT = 0x11,
+
+	SNES_MARIO_CIRCUIT_3 = 0x18,
+	DS_PEACH_GARDENS = 0x16,
+	GCN_DK_MOUNTAIN = 0x13,
+	N64_BOWSERS_CASTLE = 0x1C
 };
 
 #endif
 
+#define RACE_STRUCTURES
 
+typedef struct COURSE_STATE;
+typedef struct COURSE_CACHE
+{
+	const char* GET_CHARACTER_NAME(CHARACTER_ID CHARACTER_ID);
+	static void INIT();
+	static void LOAD(NITRO_TRACKS* NITRO, RETRO_TRACKS* RETRO);
+	virtual ~COURSE_CACHE();
+};
+
+#ifndef RACE_PROPERTIES
 #define RACE_PROPERTIES const
 
 extern RACE_PROPERTIES NITRO_TRACKS NITRO[8];
@@ -46,5 +76,6 @@ extern RACE_PROPERTIES RETRO_TRACKS RETRO[4];
 extern const S32 RANK_SCORE[5];
 extern const U16 SCORE[4];
 
+#endif
 
 #endif
