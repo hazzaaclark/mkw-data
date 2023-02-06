@@ -5,13 +5,6 @@
 
 #include "common.h"
 
-#ifndef WEIGHT_CLASSES
-#define WEIGHT_CLASSES
-
-typedef struct SMALL_WEIGHTS;
-typedef struct MEDIUM_WEIGHTS;
-typedef struct LARGE_WEIGHTS;
-
 typedef enum SMALL : U8
 {
 	MARIO = 0x6,
@@ -51,10 +44,5 @@ typedef enum LARGE : U8
 
 };
 
-SMALL_WEIGHTS* SMALL();
-MEDIUM_WEIGHTS* MEDIUM();
-LARGE_WEIGHTS* LARGE();
 
 #endif
-
-#endif 
