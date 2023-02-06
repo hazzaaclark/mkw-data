@@ -22,19 +22,22 @@ typedef enum
 
 struct DVD_ARCHIVE
 {
-	U16 ARCHIVE_COUNT = 1;
-	void INIT();
-	void CLEAR();
-	void* GET_FILE(const char* NAME, SIZE_T* SIZE);
-	void* UNMOUNT_DISK();
-
+	static U16 ARCHIVE_COUNT;
+	static void INIT();
+	static void CLEAR();
+	static void* GET_FILE(const char* NAME, SIZE_T* SIZE);
 };
 
 struct DVD_FUNCTIONS
 {
+	static void SET_ARCHIVE_HEAP();
+	static void SET_FILE_HEAP();
 	static void MOUNT();
-	static void LOAD();
+	static void LOAD(const char* NAME, UNKNOWN_32 UNK_PRM);
 	static void LOAD_UNSIGNED(U32 UNUSED);
+	static void* UNMOUNT_DISK();
+	static bool IS_LOADED();
+	static U16 RIPPED_ARCHIVE_COUNT();
 };
 
 #endif 
